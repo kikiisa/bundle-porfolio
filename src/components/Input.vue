@@ -40,7 +40,7 @@ export default {
         const datas = ref([])
         const getData = async () => 
         {
-            await axios.get("http://localhost:5500/service_nglink.php")
+            await axios.get("https://gemasuararakyat/service_nglink.php")
             .then((response) => {
                 datas.value = response.data.data
             })
@@ -54,7 +54,7 @@ export default {
             {
                 const formData = new FormData();
                 formData.append("pesan",message.value)
-                await axios.post("http://localhost:5500/service_nglink.php",formData)
+                await axios.post("https://gemasuararakyat/service_nglink.php",formData)
                 .then((respondes) => {
                     message.value = ""
                     createToast('Terimah Kasih Kaka Telah Mengkritik Saya')   
